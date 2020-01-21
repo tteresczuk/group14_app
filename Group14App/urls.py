@@ -19,5 +19,9 @@ from group14_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('login', views.login, name='login'),
+    path('register', views.new_user_register, name='user_registration'),
+    path('guest', views.guest, name='guest'),
+
 ]
