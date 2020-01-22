@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group 14 App Skeleton</title>
+</head>
+<p>
+    {{ message }}
+
+<form action="" method="get">
+    Dear user, what is your name? <br><input type="text" name="name">
+    <br>
+    And your city? <br><input type="text" name="city">
+    <br>
+    Date of birth? <br><input type="date" name="dob">
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+{% for p in people %}
+    Name: {{ p.0 }}, City: {{ p.1 }};
+{% endfor %}
+<br>
+<a href="{% url 'login' %}">login</a><br>
+<a href="{% url 'register' %}">register</a><br>
+<a href="{% url 'guest' %}">guest</a><br>
+</body>
+</html>
