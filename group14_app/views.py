@@ -3,6 +3,11 @@ from django.shortcuts import render
 def home(request):
     data = dict()
     data['message'] = 'This is our fantastic project'
+    people = [['John', 'New York', ],
+              ['Qing', 'Boston',],
+              ['Jill', 'Oslo'],
+              ['Raja', 'Stockholm']]
+    data['people'] = people
     return render(request, 'home.html', context=data)
 
 def login(request):

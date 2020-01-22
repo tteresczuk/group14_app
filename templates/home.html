@@ -6,10 +6,12 @@
 </head>
 <body>
 {{ message }}
-    <br>
-
-    <a href="{% url 'login' %}">login</a><br>
-    <a href="{% url 'user_registration' %}">register</a><br>
-    <a href="{% url 'guest' %}">guest</a><br>
+<br>
+{% for p in people %}
+    Name: {{ p.0 }}, City: {{ p.1 }};
+{% endfor %}
+<a href="{% url 'login' %}">login</a><br>
+<a href="{% url 'user_registration' %}">register</a><br>
+<a href="{% url 'guest' %}">guest</a><br>
 </body>
 </html>
